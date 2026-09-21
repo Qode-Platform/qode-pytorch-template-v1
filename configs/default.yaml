@@ -1,0 +1,6 @@
+epochs: 5
+batch_size: 64
+lr: 0.001
+num_classes: 10
+data_dir: ./data
+checkpoint_dir: ./checkpoints
