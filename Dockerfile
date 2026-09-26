@@ -6,10 +6,6 @@
 #     image is a runnable job image. It will never satisfy a $PORT health check.
 #   - torch comes from the CPU wheel index; the default PyPI wheel pulls ~2.5GB of
 #     CUDA that a CI builder and this registry do not need.
-#
-# BASE_PATH is NOT baked in: it is per-agent and only known at run time, so the
-# image serves at the host root under k8s and the agent's /direct/<id>:<port>
-# run supplies its own prefix.
 
 FROM python:3.12-slim AS build
 WORKDIR /app
